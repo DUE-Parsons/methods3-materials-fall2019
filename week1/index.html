@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 1 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" type="text/css" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 1</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide">
+            <h1>Syllabus</h1>
+        </div>
+
+        <div class="slide">
+            <h1>Syllabus</h1>
+            <ul>
+                <li>6 weeks: GIS</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h1>Syllabus</h1>
+            <ul>
+                <li>6 weeks: GIS</li>
+                <li>5 weeks: online maps</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h1>Syllabus</h1>
+            <ul>
+                <li>6 weeks: GIS</li>
+                <li>5 weeks: online maps</li>
+                <li>4 weeks: final projects</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>Class homepage</h2>
+            <p><a target="_blank" href="https://due-parsons.github.io/methods3-materials-fall2019/">due-parsons.github.io/methods3-materials-fall2019</a></p>
+        </div>
+
+        <div class="slide">
+            <h2>Assignments will be posted in Canvas</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Do assignments on time or lose 25% credit.</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Final grade =</h2>
+            <p>20% attendance and participation +</p>
+            <p>30% assignments +</p>
+            <p>50% final project</p>
+        </div>
+
+        <div class="slide">
+            <h1>Email</h1>
+            <p>Notifications from me will come through <a href="https://groups.google.com/a/newschool.edu/forum/#!forum/due-methods-3-fall-2019-group">the Google Group</a></p>
+        </div>
+
+        <div class="slide">
+            <h1>Email</h1>
+            <p>If you want to ask a question about an assignment or a technical question, please create a post through the Google Group (email <a href="mailto:due-methods-3-fall-2019-group@newschool.edu">due-methods-3-fall-2019-group@newschool.edu</a>)</p>
+        </div>
+
+        <div class="slide">
+            <h1>Email</h1>
+            <p>If you need to talk about something personal, email me directly</p>
+        </div>
+
+        <div class="slide">
+            <h1>GIS</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/scale.jpg);">
+            <h1>cartography</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/projections.png);">
+            <h1>projections</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/choropleth.jpg);">
+            <h1>choropleths</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geoprocessing.gif);">
+            <h1>geoprocessing</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/heatmaps.png);">
+            <h1>heat maps</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectification.gif);">
+            <h1>georectification</h1>
+        </div>
+
+        <div class="slide">
+            <h1>Online maps</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto.png);">
+            <h1>Carto</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm.png);">
+            <h1>OpenStreetMap</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h1>Mapbox</h1>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/luis.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/rehanna.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/berlin-wall.png);">
+            <a class="source" href="https://team.cartodb.com/u/santiagoa/viz/ed60a122-6f43-11e4-a294-0e4fddd5de28/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/methods3-fall2015.png);">
+            <a class="source" href="http://due-parsons.github.io/methods3-fall2015/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/methods3-fall2016.png);">
+            <a class="source" href="http://due-parsons.github.io/methods3-fall2016/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/methods3-fall2017.png);">
+            <a class="source" href="http://due-parsons.github.io/methods3-fall2017/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/intro-gis.png);">
+            <a class="source" href="https://courses.newschool.edu/courses/NINT5380/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maps-as-media.png);">
+            <a class="source" href="https://courses.newschool.edu/courses/NMDS5223">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>maps that I've made</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/garden_maps.png);">
+            <a class="source" href="http://gardenmaps.org/">
+                garden maps
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a class="source" href="http://596acres.org/">
+                Living Lots NYC (596 Acres)
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/curb-your-litter.png);">
+            <a class="source" href="http://map.curbyourlitter.org/">
+                Curb Your Litter
+            </a>
+        </div>
+
+        <div class="slide">
+            <h1>What is a map?</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/to.jpg);">
+            <a class="source" href="http://commons.wikimedia.org/wiki/Category:T_and_O_map">
+                T and O map
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hereford_mappa_mundi.jpg);">
+            <a class="source" href="http://www.herefordcathedral.org/visit-us/mappa-mundi-1">
+                Mappa Mundi, ca 1300
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hereford_mappa_mundi_zoom.jpg);">
+            <a class="source" href="http://www.herefordcathedral.org/visit-us/mappa-mundi-1">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tenochtitlan.jpg);">
+            <a class="source" href="http://www.motecuhzoma.de/karten.html">
+                Tenochtitlán, 1524
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/Mercator_1569.png);">
+            <a class="source" href="http://en.wikipedia.org/wiki/Mercator_1569_world_map">
+                Mercator, 1569
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/Mercator_1569_zoom.jpg);">
+            <a class="source" href="http://en.wikipedia.org/wiki/Mercator_1569_world_map">
+                Mercator, 1569
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/Gerardus_Mercator.jpg);">
+            <a class="source" href="http://en.wikipedia.org/wiki/Mercator_1569_world_map">
+                Mercator
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mercator.gif);">
+            <a class="source" href="http://mathworld.wolfram.com/MercatorProjection.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/miasma_cholera.jpg);">
+            <a class="source" href="http://nowheremag.com/2013/09/you-are-here-cholera-map/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/snow_large.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/snow_zoom.png);">
+            <a class="source" href="http://www.udel.edu/johnmack/frec682/cholera/cholera2.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/snow_death_pump.jpg);">
+            <a class="source" href="http://www.nature.com/nature/journal/v495/n7440/full/495169a.html?WT.ec_id=NATURE-20130314">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/snow_heat_map.jpg);">
+            <a class="source" href="http://www.udel.edu/johnmack/frec682/cholera/cholera2.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h1>GIS</h1>
+        </div>
+
+        <div class="slide">
+            <h1>GIS</h1>
+            <p>
+                "Any system for capturing, storing, checking, and displaying data related to positions on the Earth's surface"
+            </p>
+            <a class="source" href="https://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/">source</a>
+        </div>
+
+        <div class="slide">
+            <h1>GIS</h1>
+            <p>
+                "In a GIS, you connect <strong>data</strong> with <strong>geography</strong>."
+            </p>
+            <a class="source" href="https://gisgeography.com/what-gis-geographic-information-systems/">gisgeography.com</a>
+            <a class="source" href="http://www.datapolitan.com/DOT_GIS/20160610_Intermediate_GIS/#41">datapolitan</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tomlinson.jpg);">
+            <h2>Roger Tomlinson</h2>
+            <a class="source" href="http://www.esri.com/esri-news/arcnews/spring14articles/roger-tomlinson-geographer">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <iframe width="640" height="480" src="https://www.youtube.com/embed/eAFG6aQTwPk" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dangermond.jpg);">
+            <h2>Jack Dangermond</h2>
+            <a class="source" href="http://www.inc.com/magazine/201307/christine-lagorio/jack-dangermond-how-he-started-esri.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/esri.gif);">
+            <a class="source" href="http://www.esri.com/">ESRI</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis.png); background-size: 20%;">
+            <a class="source" href="http://qgis.org/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>a GIS will let you:</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>visualize map data</li>
+                <li>create and edit map data</li>
+                <li>overlay map data</li>
+                <li>analyze map data</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/streeteasy.jpg);">
+            <a class="source" href="https://streeteasy.com/blog/streeteasy-debuts-latest-ad-campaign/">streeteasy</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/layers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-red-hook-0.png);">
+            <a class="source" href="https://kiran-puri.com/Placemaking">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-red-hook-1.png);">
+            <a class="source" href="https://kiran-puri.com/Placemaking">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-red-hook-2.png);">
+            <a class="source" href="https://kiran-puri.com/Placemaking">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-red-hook-3.png);">
+            <a class="source" href="https://kiran-puri.com/Placemaking">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-red-hook-4.png);">
+            <a class="source" href="https://kiran-puri.com/Placemaking">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-red-hook-5.png);">
+            <a class="source" href="https://kiran-puri.com/Placemaking">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>the history of cartography in four bullet points:</h2>
+        </div>
+
+        <div class="slide">
+            <p>up to 15th c: maps mostly as diagrams</p>
+        </div>
+
+        <div class="slide">
+            <p>up to 15th c: maps mostly as diagrams</p>
+            <p>15th c: world maps for navigation</p>
+        </div>
+
+        <div class="slide">
+            <p>up to 15th c: maps mostly as diagrams</p>
+            <p>15th c: world maps for navigation</p>
+            <p>19th c: maps combined with data</p>
+        </div>
+
+        <div class="slide">
+            <p>up to 15th c: maps mostly as diagrams</p>
+            <p>15th c: world maps for navigation</p>
+            <p>19th c: maps combined with data</p>
+            <p>mid 20th c: GIS</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cadastral.jpg);">
+            <a href="https://maps.geshergalicia.org/references/index.html" class="source">Austrian cadastral map</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/grafton_utah_small.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fitzgerald_recreational_facilities.jpg);">
+            <a class="source" href="http://www.ugapress.org/index.php/books/fitzgerald">Bill Bunge, Recreational Facilities in Fitzgerald, Detroit (1966)</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fitzgerald_recreational_facilities_picture.jpg);">
+            <a class="source" href="http://www.ugapress.org/index.php/books/fitzgerald">Bill Bunge, Fitzgerald</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fitzgerald_recreational_facilities_picture.jpg);">
+            <div style="background: rgba(255, 255, 255, 0.8); font-size: 55px; line-height: 65px; padding: 20px;">
+                "The geographical concept called 'land use' is normally restricted to property mapping. But land is also used directly by humans. What is it that the human child in Fitzgerald actually touches? Is this a suitable surface for human contact, or it just cheap, easy to maintain, easy to drain?"
+            </div>
+            <a class="source" href="http://www.ugapress.org/index.php/books/fitzgerald">Bill Bunge, Fitzgerald</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/everything_sings_newsletter_mentions_small.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/everything_sings_newsletter_mentions_small.jpg);">
+            <a class="source" href="http://sigliopress.com/book/everything-sings/">Everything Sings: households mentioned in the neighborhood newsletter</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/state_of_the_world_apocalypse_small.jpg);">
+            <a class="source" href="http://www.amazon.com/State-World-Atlas-Michael-Kidron/dp/0671424394">The New State of the World Atlas (1987)</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/scp_les.png);">
+            <a class="source" href="http://www.notbored.org/the-scp.html">
+                Surveillance Camera Players
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/isee.png);">
+            <a class="source" href="http://66.93.183.118:8080/isee/s1?zm=0&id=11885">
+                iSee
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/crampton_mapping.jpg);">
+            <a class="source" href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1405121726.html#">
+                Crampton, Mapping
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/crampton_mapping.jpg);">
+            <div style="background: rgba(255, 255, 255, 0.8); font-size: 55px; line-height: 65px; padding: 20px;">
+                <p>"During the last 50 years or so cartography and GIS have very much aspired to push maps as factual scientific documents. Critical cartography and GIS however conceives of mapping as embedded in specific <em>relations of power</em>."</p>
+            </div>
+            <a class="source" href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1405121726.html#">
+                Crampton, Mapping
+            </a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/layers.png);"></div>
+
+        <div class="slide" style="background-image: url(img/gis_vector_raster.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_raster.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_vector.jpg);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>What are latitude and longitude?</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/battleship_piece.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/battleship_pegs.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/battleship_board.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/latlng2.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/meridians.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/latlng_coordinates.jpg);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>lab</h1>
+        </div>
+
+        <div class="slide">
+            <h1>lab</h1>
+            <a href="inclass.html">in-class exercises, part 1</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>Introduction to webmaps</h1>
+            <p>aka "the geoweb", "online maps"</p>
+        </div>
+
+        <div class="slide">
+            <h2>webmaps</h2>
+            <p>maps on the internet and the <strong>practices</strong> and <strong>software</strong> that facililtate their creation</p>
+        </div>
+
+        <div class="slide">
+            <h2>"practices and software"</h2>
+        </div>
+
+        <div class="slide">
+            <p>platforms for working with maps and data</p>
+        </div>
+
+        <div class="slide">
+            <p>(open) data</p>
+        </div>
+
+        <div class="slide">
+            <p>adding spatial data to otherwise non-spatial artifacts</p>
+            <p>(eg, geotagging of pictures on a service like flickr, adding location to tweets, etc)</p>
+        </div>
+
+        <div class="slide">
+            <h2>"practices and software"</h2>
+            <ul>
+                <li>platforms for working with maps and data</li>
+                <li>(open) data</li>
+                <li>adding spatial data to otherwise non-spatial artifacts</li>
+            </p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foursquare_pizza.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/streetview.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/localsandtourists.png);">
+            <a class="source" href="http://www.flickr.com/photos/walkingsf/4671594023/in/set-72157624209158632">
+                Locals and Tourists
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/floatingsheep_twitterbeerchurch.jpg);">
+            <a class="source" href="http://www.floatingsheep.org/2012/07/church-or-beer-americans-on-twitter.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/twitter-economic-crisis-torque.gif);">
+            <a class="source" href="https://team.cartodb.com/u/santiagoa/viz/3971d9f4-24e9-11e5-9574-0e5e07bb5d8a/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/inside-airbnb.png);">
+            <a class="source" href="http://insideairbnb.com/new-york-city/">Inside AirBnB</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn0.png);">
+            <a class="source" href="http://www.datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn1.png);">
+            <a class="source" href="http://www.datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn2.png);">
+            <a class="source" href="http://www.datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn0.png);">
+            <a class="source" href="http://www.datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>How did we get here?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>first web maps were static</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapquest.png);">
+            <a class="source" href="http://web.archive.org/web/19971211230909/http://www.mapquest.com/">
+                Mapquest via the Wayback Machine
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapquest_map.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapquest_map.jpg);">
+            <h2>click</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapquest_map.jpg);">
+            <h2>click</h2>
+            <h2>...wait</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapquest_map.jpg);">
+            <h2>click</h2>
+            <h2>...wait</h2>
+            <h2>entire page reloads, map is panned east</h2>
+        </div>
+
+        <div class="slide">
+            <h2>static online maps are often indistinguishable from paper maps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fcwa.jpg);">
+            <a class="source" href="http://foodchainworkers.org/?page_id=2443">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mother-jones-crops.gif);">
+            <a class="source" href="http://www.motherjones.com/environment/2014/02/wheres-californias-water-going">Mother Jones</a>
+        </div>
+
+        <div class="slide">
+            <h2>how did we get here?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>~1997 - today</h2>
+            <ol style="list-style: decimal outside; padding-left: 50px;">
+                <li>GPS</li>
+                <li>the web changed</li>
+                <li>more data became available</li>
+                <li>FOSS became mainstream</li>
+            <ol>
+        </div>
+
+        <div class="slide">
+            <h2>1. GPS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps_recievers.jpg);">
+            <a class="source" href="http://en.wikipedia.org/wiki/GPS_navigation_device">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps_satellites_reading.png);">
+            <a class="source" href="http://en.wikipedia.org/wiki/Dilution_of_precision_(GPS)">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>the end of Selective Availability (2000)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps-sa-noaa.png);">
+            <a class="source" href="http://www.gps.gov/systems/gps/modernization/sa/data/">gps.gov</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps-sa-schlaggo.gif);">
+            <a class="source" href="http://www.schlaggo.de/gps/">schlaggo.de</a>
+        </div>
+
+        <div class="slide">
+            <h2>2. the web has changed</h2>
+        </div>
+
+        <div class="slide">
+            <h2>"Web 2.0" (~2004)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tim_oreilly.jpg);">
+            <h1>Tim O'Reilly</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/oreilly_books.png);">
+            <a class="source" href="http://shop.oreilly.com/category/get/data-science-kit.do">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li>Britannica Online &rarr; Wikipedia</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li>Britannica Online &rarr; Wikipedia</li>
+                <li>publishing &rarr; podcasting, blogging</li>
+            </ul>
+            <div style="margin-top: 100px;">
+                <a href="http://oreilly.com/web2/archive/what-is-web-20.html">
+                    What is Web 2.0
+                </a> (2005)
+            </div>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li>Britannica Online &rarr; Wikipedia</li>
+                <li>publishing &rarr; podcasting, blogging</li>
+            </ul>
+            <div style="margin-top: 100px;">
+                <a href="http://oreilly.com/web2/archive/what-is-web-20.html">
+                    What is Web 2.0
+                </a> (2005)
+            </div>
+            <div>...</div>
+            <div>desktop GIS &rarr; webmaps</div>
+        </div>
+
+        <div class="slide">
+            <h2>AJAX (2005)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ajax_grounded.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/search.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>AJAX</h2>
+            <p>(Asynchronous Javascript and XML)</p>
+        </div>
+
+        <div class="slide">
+            <h2>AJAX</h2>
+            <p style="text-decoration: line-through;">(Asynchronous Javascript and XML)</p>
+            <p>dynamically loading portions of webpages</p>
+        </div>
+
+        <div class="slide">
+            <h2>AJAX (2005)</h2>
+            <p>not really new, but newly articulated at the time</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/internet-population.png);">
+            <a class="source" href="http://www.internetlivestats.com/internet-users/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/internet_speeds.png);">
+            <a class="source" href="http://www.webpronews.com/the-internet-was-kind-of-terrible-in-2002-infographic-2012-08">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>3. data becomes more available</h2>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                    <li>licensed freely</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                    <li>licensed freely</li>
+                    <li>usually created by a large entity</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open_data_ipis.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Housing-Development/IPIS-Integrated-Property-Information-System-/n5mv-nfpy">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/free_pluto.png);">
+            <a class="source" href="http://spatialityblog.com/2013/07/25/nycs-mappluto-is-free/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/bklynr_block_by_block.png);">
+            <a class="source" href="http://bklynr.com/block-by-block-brooklyns-past-and-present/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-portals.png);">
+            <a class="source" href="https://github.com/rebeccawilliams/opendatacities/blob/master/portals.csv">github.com/rebeccawilliams/opendatacities/</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/data-portals-org.png);">
+            <a class="source" href="http://dataportals.org/search">dataportals.org</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-opendata-filming-locations.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Business/Filming-Locations-Scenes-from-the-City-/qb3k-n8mm">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <h1>How do we give data back?</h1>
+        </div>
+
+        <div class="slide">
+            <h2>collaborative data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-id.gif);">
+            <a class="source" href="https://www.mapbox.com/blog/id-for-openstreetmap-reaches-beta-1/">OpenStreetMap's iD editor</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-show-me-the-way.gif);">
+            <a class="source" href="http://osmlab.github.io/show-me-the-way/">show me the way</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapkibera.png);">
+            <a class="source" href="http://mapkibera.org/">Map Kibera</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm_every_line_ever.png);">
+            <a class="source" href="http://graphspace.com/every-line-every-point/london.html">
+                OpenStreetMap: Every Line Ever, Every Point Ever
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm_by_contributor_europe.jpg);">
+            <a class="source" href="https://www.mapbox.com/blog/osm-community-visualized/">
+                OpenStreetMap’s Contributor Community Visualized - Individual by Individual
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/haiti1.png);">
+            <p>Haiti in OpenStreetMap before 2010 earthquake</p>
+            <a class="source" href="http://brainoff.com/weblog/2010/01/14/1518">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/haiti2.png);">
+            <p>Haiti in OpenStreetMap after 2010 earthquake</p>
+            <a class="source" href="http://brainoff.com/weblog/2010/01/14/1518">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/aircasting-heartrate.png);">
+            <a class="source" href="http://aircasting.org/map#/map_sessions?data=%7B%22location%22:%7B%22address%22:%22%22,%22distance%22:%2210%22,%22limit%22:false%7D,%22gridResolution%22:25,%22tags%22:%22%22,%22usernames%22:%22%22,%22time%22:%7B%22timeFrom%22:240,%22timeTo%22:1679,%22dayFrom%22:0,%22dayTo%22:365,%22yearFrom%22:2011,%22yearTo%22:2015%7D,%22heat%22:%7B%22highest%22:220,%22high%22:175,%22mid%22:130,%22low%22:85,%22lowest%22:40%7D,%22sensorId%22:%22Heart%20Rate-BioHarness3:HR%20(bpm)%22%7D&sessionsIds=%5B1611%5D&tmp=%7B%22tmpSensorId%22:%22%22%7D&map=%7B%22mapType%22:%22hybrid%22,%22zoom%22:16,%22lat%22:40.73954938918934,%22lng%22:-73.95741594679532%7D">aircasting.org</a>
+        </div>
+
+        <div class="slide">
+            <h2>4. FOSS comes into the mainstream</h2>
+            <img style="max-height: 50%; width: auto;" src="img/linux.png" />
+        </div>
+
+        <div class="slide">
+            <h2>Free / Open Source Software</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/rms.jpg);">
+        </div>
+
+        <div class="slide">
+            <h2>goal is to protect the "fundamental freedoms of software users"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/source-code.png);">
+            <h2>by opening source code</h2>
+        </div>
+
+        <div class="slide">
+            <h2>freedoms to</h2>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>use,</li>
+                <li>study,</li>
+                <li>modify, and</li>
+                <li>redistribute</li>
+            </ul>
+            <p>this source code</p>
+        </div>
+
+        <div class="slide">
+            <h1>in exchange for</h1>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>attribution</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h1>in exchange for</h1>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>attribution, and sometimes</li>
+                <li>sharing your changes under the same license</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mit-license.png);">
+            <h1>backed by licenses</h1>
+        </div>
+
+        <div class="slide">
+            <h2>~1997 - today</h2>
+            <ol style="list-style: decimal outside; padding-left: 50px;">
+                <li>GPS</li>
+                <li>the web changed</li>
+                <li>more data became available</li>
+                <li>FOSS became mainstream</li>
+            <ol>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>lab</h2>
+            <a href="inclass.html">in-class exercises, part 2</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>recommended readings</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/woods_power_of_maps.jpg);">
+            <a class="source" href="http://www.guilford.com/books/Rethinking-the-Power-of-Maps/Denis-Wood/9781593853662">
+                Woods, Rethinking the Power of Maps
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/crampton_mapping.jpg);">
+            <a class="source" href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1405121726.html#">
+                Crampton, Mapping
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/monmonier_lie_with_maps.jpg);">
+            <a class="source" href="http://www.markmonmonier.com/how_to_lie_with_maps_14880.htm">
+                Monmonier, How to Lie with Maps
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/bolstad_gis_fundamentals.jpg);">
+            <a class="source" href="http://www.amazon.com/GIS-Fundamentals-Geographic-Information-Systems/dp/0971764735">
+                Bolstad, GIS Fundamentals
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/discover-qgis.png);">
+            <a class="source" href="http://locatepress.com/dqw">
+                Discover QGIS
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-2-cookbook.jpg);">
+            <a class="source" href="https://www.packtpub.com/application-development/qgis-2-cookbook">
+                QGIS 2 Cookbook
+            </a>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 3 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 3</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view as grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/hurricane-dorian-nyt.png);">
+            <a class="source" href="https://www.nytimes.com/interactive/2019/09/06/us/hurricane-dorian-path-map-track.html">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/us-wgs84.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/us-albers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-wgs84.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-2263.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-settings.png);"></div>
+
+        <div class="slide" style="background-image: url(img/state_plane.jpg);">
+            <a class="source" href="http://gis.tulaliptribes-nsn.gov/Home/FrequentlyAskedQuestions.aspx">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/epsg_2263.png);">
+            <a class="source" href="http://spatialreference.org/ref/epsg/2263/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/epsg_2263.png);">
+            <h2>best for New York area, many city datasets use this</h2>
+            <a class="source" href="http://spatialreference.org/ref/epsg/2263/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>for now, try to remember the codes <em>2263</em> and <em>4326</em></h2>
+        </div>
+
+        <div class="slide">
+            <h2>you will encounter projections in three ways in QGIS:</h2>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+                <li>assignment</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+                <li>assignment (when QGIS doesn't know which projection the data should be in)</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+                <li>assignment (when QGIS doesn't know which projection the data should be in)</li>
+                <li>overlay</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <ol>
+                <li>rendering (making your map look good)</li>
+                <li>assignment (when QGIS doesn't know which projection the data should be in)</li>
+                <li>overlay (for some calculations)</li>
+            </ol>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>vector spatial data types</h2>
+        </div>
+
+        <div class="slide">
+            <h2>vector spatial data types</h2>
+            <ul style="list-style: disc;">
+                <li>shapefile</li>
+                <li>geojson</li>
+                <li>geopackage</li>
+                <li>KML</li>
+                <li>CSV</li>
+                <li>...and others!</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>if you're unsure, download the file and drag and drop into QGIS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles are very common</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles have some annoying properties</h2>
+        </div>
+
+        <div class="slide">
+            <h2>1. column names limited to ten characters</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-column-names.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-column-names.png);">
+            <h2>how do you pronounce "C_DIG2DESC"?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>2. multiple files make up a shapefile</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-files.png);">
+        </div>
+
+        <div class="slide">
+            <h2>3. one geometry type per shapefile</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-one-geometry-per-file.png);">
+        </div>
+
+        <div class="slide">
+            <h2>despite it all, shapefiles are still by far the most common spatial data format</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geopackage.png);">
+            <h2>consider geopackage</h2>
+            <a href="http://www.geopackage.org/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>but CSVs are common and handy for point data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>these are simply text files</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv.png);">
+            <h2><em>c</em>omma <em>s</em>eparated <em>v</em>alues</h2>
+        </div>
+
+        <div class="slide">
+            <h2>if a CSV has coordinates as two separate columns, you can open that in QGIS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>QGIS doesn't know what the projection of a CSV is, so you need to help it out</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>Attributes</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attributes.png);">
+        </div>
+
+        <div class="slide">
+            <h1>Selection</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/selection.png);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>thematic maps</h1>
+        </div>
+
+        <div class="slide">
+            <h1>thematic maps focus on a theme or subject</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/state_atlas_exploitation.jpg);">
+        </div>
+
+        <div class="slide">
+            <h1>vs reference maps</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/reference_map_oregon.jpg);">
+            <a href="https://www.lib.utexas.edu/maps/oregon.html" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h1>qualitative vs quantitative</h1>
+        </div>
+
+        <div class="slide">
+            <h1>in maps:</h1>
+        </div>
+
+        <div class="slide">
+            <h1>in maps:</h1>
+            <h1>qualitative &rarr; categories</h1>
+        </div>
+
+        <div class="slide">
+            <h1>in maps:</h1>
+            <h1>qualitative &rarr; categories</h1>
+            <h1>quantitative &rarr; numbers</h1>
+        </div>
+
+        <div class="slide">
+            <h1>qualitative thematic maps categorize features' attributes</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wood_fences.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/wood_fences_legend.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/land_cover.jpg);">
+        </div>
+
+        <div class="slide">
+            <h1>lab</h1>
+            <a href="inclass.html">in-class exercises, part 2</a>
+        </div>
+
+        <div class="slide">
+            <h1>quantitative thematic maps use features' numeric attributes</h1>
+        </div>
+
+        <div class="slide">
+            <h1>quantitative thematic maps</h1>
+            <p>aka choropleth maps</p>
+        </div>
+
+        <div class="slide">
+            <h1>choropleth</h1>
+            <p><strong>choro</strong>: region</p>
+            <p><strong>pleth</strong>: multitude</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/bachelors_degree.jpg);">
+            <a class="source" href="http://rkpjrhist615.wordpress.com/page/6/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/population_growth.jpg);">
+            <a class="source" href="http://www.osmmc.ca/gallery.php">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/smoking_rates.png);">
+            <a class="source" href="http://www.nytimes.com/interactive/2014/03/25/us/smoking-rate-map.html?_r=0">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h1>how do you decide which regions are given which styles?</h1>
+        </div>
+
+        <div class="slide">
+            <h1>you make up categories for ranges of values</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis_fundamentals.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fig9-15.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fig9-16.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fig9-17.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fig9-18.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/incarcerated_population.jpg);">
+            <a class="source" href="http://personal.frostburg.edu/ingarvie0/Maps.htm">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/choropleth_multiethnic.jpg);">
+            <a class="source" href="http://uxblog.idvsolutions.com/2011/10/telling-truth.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/choropleth_multiethnic_histogram.jpg);">
+            <a class="source" href="http://uxblog.idvsolutions.com/2011/10/telling-truth.html">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>the Modifiable Areal Unit Problem</h2>
+        </div>
+
+        <div class="slide">
+            <h2>the Modifiable Areal Unit Problem</h2>
+            <p>the shapes you use can influence the way your data looks without changing the data</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/maup_rate_numbers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdc_ebola.jpg);">
+            <a class="source" href="http://www.cdc.gov/vhf/ebola/resources/distribution-map-guinea-outbreak.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gerrymander.png);">
+            <a class="source" href="https://en.wikipedia.org/wiki/Gerrymandering">
+                the gerrymander
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gerrymandered-md.png);">
+            <a class="source" href="https://www.washingtonpost.com/news/wonk/wp/2014/05/15/americas-most-gerrymandered-congressional-districts/?utm_term=.0c66cd61b698">MD's 3rd district</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gerrymandered-pa.png);">
+            <a class="source" href="https://www.washingtonpost.com/news/wonk/wp/2014/05/15/americas-most-gerrymandered-congressional-districts/?utm_term=.0c66cd61b698">PA's 7th district</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2016-clinton-would-have-won.png);">
+            <a class="source" href="https://medium.com/@khayeswilson/clinton-would-have-won-if-the-united-states-looked-like-this-7b9c844b76a9">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2016-election-states.png);">
+            <a class="source" href="http://www-personal.umich.edu/~mejn/election/2016/">2016 presidential election results</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2016-election-counties.png);">
+            <a class="source" href="http://www-personal.umich.edu/~mejn/election/2016/">2016 presidential election results</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2016-election-counties-gradient.png);">
+            <a class="source" href="http://www-personal.umich.edu/~mejn/election/2016/">2016 presidential election results</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/trump-map-desk.jpg);">
+            <a class="source" href="http://www.newsweek.com/donald-trump-wants-you-know-he-won-election-591920">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2016-election-counties-cartogram.png);">
+            <a class="source" href="http://www-personal.umich.edu/~mejn/election/2016/">2016 presidential election results</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2016-election-counties-population-alpha.jpg);">
+            <a class="source" href="http://geoawesomeness.com/top-23-maps-charts-explain-results-2016-us-presidential-elections/">2016 presidential election results</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2012-election-counties-circles.png);">
+            <a class="source" href="https://www.nytimes.com/interactive/2016/11/01/upshot/many-ways-to-map-election-results.html">2012 presidential election results</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-search.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-search-points-in.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/count-points-in-polygon.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/join-count.png);">
+        </div>
+
+        <div class="slide">
+            <h2>sometimes it will help to <em>export</em> a file to a shapefile before doing calculations</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/save-as.png);"></div>
+
+        <div class="slide" style="background-image: url(img/qgis-projections-layer.png);"></div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>lab</h1>
+            <a href="inclass.html">in-class exercises, part 3</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>Finding data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data.png);">
+            <a class="source" href="https://data.cityofnewyork.us">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-311-0.png);">
+            <a class="source" href="https://data.cityofnewyork.us">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-311-1.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-311-2.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-311-3.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-311-4.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-311-5.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-311-6.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">data.cityofnewyork.us</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/bytes.png);">
+            <a class="source" href="https://www1.nyc.gov/site/planning/data-maps/open-data.page">bytes of the big apple</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/data_gov.png);">
+            <a class="source" href="http://data.gov">data.gov</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/american_factfinder.png);">
+            <a class="source" href="http://factfinder2.census.gov">american factfinder</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/world-databank.png);">
+            <a class="source" href="http://databank.worldbank.org">databank.worldbank.org</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/usgs-earthquakes.png);">
+            <a class="source" href="http://earthquake.usgs.gov/earthquakes/search">USGS earthquake data</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/bloomberg-amazon-fires.png);">
+            <a class="source" href="https://www.bloomberg.com/graphics/2019-why-amazon-rainforest-is-on-fire/?utm_campaign=Fair%20Warning&utm_medium=email&utm_source=Revue%20newsletter">Bloomberg</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/guardian-amazon-fires.png);">
+            <a class="source" href="https://www.theguardian.com/environment/2019/aug/23/amazon-fires-what-is-happening-anything-we-can-do">The Guardian</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-amazon-fires.png);">
+            <a class="source" href="https://www.nytimes.com/interactive/2019/08/24/world/americas/amazon-rain-forest-fire-maps.html">NYT</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-amazon-fires-2.png);">
+            <a class="source" href="https://www.nytimes.com/interactive/2019/08/24/world/americas/amazon-rain-forest-fire-maps.html">NYT</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/firms-fire-data.png);">
+            <a class="source" href="https://firms.modaps.eosdis.nasa.gov/active_fire/#firms-shapefile">source</a>
+        </div>
+
+    </body>
+</html>

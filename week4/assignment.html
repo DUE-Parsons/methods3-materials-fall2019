@@ -13,20 +13,18 @@
             </header>
 
             <section>
-                <p>This week we covered two major features of any GIS that help you modify data: geoprocessing and joining. The purpose of this assignment is to give you some experience with both of these.</p>
+                <p>This week we covered a major feature of any GIS that helps you modify data: geoprocessing.</p>
             </section>
 
             <section>
                 <h2>Resources</h2>
                 <p>Videos:</p>
                 <ul>
-                    <li><a class="" href="https://www.youtube.com/watch?v=2cLokNGjUro">Attribute Joins</a></li>
                     <li><a class="" href="https://www.youtube.com/watch?v=Rj8J_6pV620">Clipping</a></li>
                     <li><a class="" href="https://www.youtube.com/watch?v=LAGQIrPHncA">Buffering</a></li>
                 </ul>
                 <p>Not updated for QGIS 3, but should work fine:</p>
                 <ul>
-                    <li><a class="" href="https://www.youtube.com/watch?v=HtKMf3L-rR0">Getting and using data from the US census</a></li>
                     <li><a class="" href="https://www.youtube.com/watch?v=mGSNfohiSgU">Geoprocessing</a></li>
                 </ul>
             </section>
@@ -50,52 +48,12 @@
                     <p>Thanks for all your help!</p>
                 </div>
                 <p>Buffer the schools (I'd start with 500 feet) or bike lanes (I'd start with 25 feet) and use Select by Location to find the collisions in those buffers. You're free to re-use the collisions data you downloaded for the previous assignment, in addition to other map elements as they're useful.</p>
-            </section>
-
-            <section>
-                <h2>Part 2: Joins</h2>
-                <p>When you <em>join</em> two or more datasets, you combine them feature-by-feature, and this often gives attributes to a feature that it would not have otherwise had.</p>
-                <p><strong>Attribute joins</strong> add attributes to features based on a <strong>unique identifier</strong>. Often you will have a spatial dataset (such as a shapefile) and a CSV file with extra data that you would like to map. As long as both the spatial data and the CSV have a common unique identifier (sometimes this is a name, but it could be a unique number or an address) you can join them in QGIS and add the data from the CSV to the spatial data.</p>
-                <p>Use attribute joins to help your council member with the following:</p>
-                <div style="background: #ddd; padding: 15px;">
-                    <p>Hi again map-maker,</p>
-                    <p>Now that you're getting settled in, we'd like to get a better look at our council district using census data. In particular, let's start with <strong>renter occupancy</strong> or <strong>median household income</strong> (your choice) by census tract. Make the focus our district, but please show the surrounding area, too, for context.</p>
-                    <p>Thanks as always!</p>
-                </div>
-                <p>Download census data using <a href="https://factfinder.census.gov/">American FactFinder</a>, join with the <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_tracts.html">census tracts</a>, and make a choropleth map with some of the joined data. Choose which data to get:</p>
-                <ol>
-                    <li>renter vs owner occupancy
-                        <ol>
-                            <li><a href="https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml">Guided Search</a></li>
-                            <li>"I'm looking for information about housing"</li>
-                            <li>Occupancy Characteristic &gt; Owner/Renter (Tenure in Occupied Units)</li>
-                            <li>Get <strong>census tracts</strong> for the <strong>county or counties</strong> your district is in</li>
-                            <li>At "Are you looking for data for a race or ethnic group (race, ancestry, or tribe)?" you can select <strong>Skip this Step</strong></li>
-                            <li>Select "TENURE"</li>
-                        </ol>
-                    </li>
-                    <li>household income
-                        <ol>
-                            <li><a href="https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml">Guided Search</a></li>
-                            <li>"I'm looking for information about people"</li>
-                            <li>Income &amp; Earnings &gt; Income/Earnings (Households)</li>
-                            <li>Get <strong>census tracts</strong> for the <strong>county or counties</strong> your district is in</li>
-                            <li>At "Are you looking for data for a race or ethnic group (race, ancestry, or tribe)?" you can select <strong>Skip this Step</strong></li>
-                            <li>Select "MEDIAN INCOME IN THE PAST 12 MONTHS (IN 2016 INFLATION-ADJUSTED DOLLARS) "</li>
-                        </ol>
-                    </li>
-                </ol>
-                <p>For both, you'll want to:</p>
-                <ol>
-                    <li>Modify Tables &gt; Transpose Rows / Columns</li>
-                    <li>Download &gt; Use this data</li>
-                    <li>Edit the resulting CSV</li>
-                </ol>
+                <p>As there is only one map this week and we covered some other QGIS features in the beginning of class on Tuesday (select by location, labels, legends), I am looking to see you focusing on the nuances of your map. Try out some of these features we talked about in class and see how far you can take them.</p>
             </section>
 
             <section>
                 <h2>Submitting Your Work</h2>
-                <p>Include <strong>a PDF or image export</strong> for Part 1 and <strong>a PDF or image export</strong> for Part 2.</p>
+                <p>Include <strong>a PDF or image export</strong> for Part 1.</p>
                 <p>Finally, include a <strong>short summary</strong> (1/2 page) of what you did for this assignment. Explain what you created and how you did so. What did you have problems with? What did you enjoy? What would you like to know how to do next?</p>
             </section>
 

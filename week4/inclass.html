@@ -22,61 +22,6 @@
                 </ol>
             </section>
 
-            <section>
-                <h2>Part 2: Attribute Joins</h2>
-                <ol>
-                    <li>Open the (unbuffered) file <strong>Public_School_locations</strong> in QGIS.</li>
-                    <li>Open the CSV in <strong>school-demographic-snapshot</strong> in QGIS using the <strong>Add Delimited Text Layer</strong> tool, and select <strong>No geometry</strong> under <strong>Geometry Definition</strong>.</li>
-                    <li>Attribute join the demographic snapshot to the public schools. Use <strong>DBN</strong> from the <strong>demographic snapshot</strong>, <strong>ATS_CODE</strong> from the <strong>Public_School_locations</strong>.</li>
-                    <li>Style the schools using the joined data. Consider creating a graduated style based on one of the numeric columns.</li>
-                </ol>
-            </section>
-
-            <section>
-                <h2>Part 3: Download census data</h2>
-                <ol>
-                    <li>Go to <a href="http://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml">American FactFinder</a>.</li>
-                    <li>Select <strong>Guided Search</strong>, then click <strong>get me started</strong>.</li>
-                    <li>Download data counting owners and renters:
-                        <ol>
-                            <li>Select <strong>I'm looking for information about housing</strong>.</li>
-                            <li>Expand <strong>Occupancy Characteristic</strong>.</li>
-                            <li>Click <strong>Owner/Renter (Tenure in Occupied Units) </strong>. Click <strong>Next</strong>.</li>
-                            <li>Under <strong>Select a geographic type</strong> select <strong>Census Tract</strong>.</li>
-                            <li>Select <strong>New York</strong>. You can skip "Select a county".</li>
-                            <li>Select <strong>All Census Tracts within New York</strong>.</li>
-                            <li>Click <strong>Add To Your Selections</strong>.</li>
-                            <li>Click <strong>Next</strong>.</li>
-                            <li>When asked if you're looking for data for a race or ethnic group, click <strong>Skip This Step</strong>.</li>
-                            <li>Now you should see a list of available tables. Select <strong>Tenure</strong> up at the top of the list.</li>
-                            <li>Now you should see the data you selected. Click <strong>Modify Table</strong> and <strong>Transpose Rows/Columns</strong>, which should flip the table vertically and give you more rows than columns.</li>
-                            <li>Finally, click <strong>Download</strong>, select <strong>Use</strong>, and <strong>OK</strong> without changing any options.</li>
-                        </ol>
-                    </li>
-                </ol>
-            </section>
-
-            <section>
-                <h2>Part 4: Join census data</h2>
-                <ol>
-                    <li>First, prepare your data:
-                        <ol>
-                            <li>In Excel or some other spreadsheet program, open the owners and renters CSV downloaded in the previous part.</li>
-                            <li>Rename <code>HD01_VD01</code> to <code>total_households</code>.</li>
-                            <li>Rename <code>HD01_VD02</code> to <code>total_owners</code>.</li>
-                            <li>Rename <code>HD01_VD03</code> to <code>total_renters</code>.</li>
-                            <li>Delete row 2, which should contain <code>Id</code>, <code>Id2</code>, <code>Geography</code>, etc.</li>
-                            <li>Delete all columns that do not have headers that start with <code>GEO</code> and that we did not rename.</li>
-                        </ol>
-                        If it helps, this week's data contains an edited version of this CSV (in <strong>ACS_17_5YR_B25003</strong>).
-                    </li>
-                    <li>Open your the edited spreadsheet in QGIS.</li>
-                    <li>Open the shapefile in <strong>nys_census_tracts</strong> QGIS.</li>
-                    <li>Join the spreadsheet to the shapefile. You should be able to use <strong>GEO.id</strong> and <strong>GEO_ID</strong>.</li>
-                    <li>What if we only wanted to see this map for NYC? Save the joined layer as a new shapefile, then clip that layer to the <strong>Borough Boundaries</strong> shapefile. That is, remove the tracts and parts of tracts that are outside of the borough boundaries. Style this layer with a graduated style.</li>
-                </ol>
-            </section>
-
             <footer>
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
             </footer>

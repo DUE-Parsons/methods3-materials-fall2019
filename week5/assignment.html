@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Assignment 5 | Methods 3</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; Methods 3</a>
+                <h1>Assignment 5</h1>
+            </header>
+
+            <section>
+                <p>Please keep in mind that <a title="Final Project Proposal" href="https://canvas.newschool.edu/courses/1460477/assignments/7295381">your final project proposal</a> is also due September 30.</p>
+            </section>
+
+            <section>
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="http://www.gislounge.com/heat-maps-in-gis/">Heat maps in GIS</a></li>
+                    <li><a href="http://freecity.commons.gc.cuny.edu/2013/12/02/maps-of-nypd-stops-2011/">Hex bins used for Stop and Frisk map</a></li>
+                    <li>Penn State: Cartography and Visualization's <a href="https://www.e-education.psu.edu/geog486/node/557">label placement section</a></li>
+                    <li>axismaps' <a href="https://www.axismaps.com/guide/general/labeling/">guide to labels</a></li>
+                </ul>
+
+                <p>Videos:</p>
+                <ul>
+                    <li><a class="" href="https://www.youtube.com/watch?v=2cLokNGjUro">Attribute Join</a></li>
+                    <li><a class="" href="https://www.youtube.com/watch?v=HtKMf3L-rR0">Getting and using data from the US census</a></li>
+                    <li><a class="" href="https://www.youtube.com/watch?v=6qgh4V0GKtU">Spatial Joins</a></li>
+                    <li><a class="" href="https://www.youtube.com/watch?v=o9Gqrr5cYrY">Heat maps</a></li>
+                    <li><a class="" href="https://www.youtube.com/watch?v=CV_WrT46HIE">Hex bins</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Part 1: Census Data Joins</h2>
+                <p>When you <em>join</em> two or more datasets, you combine them feature-by-feature, and this often gives attributes to a feature that it would not have otherwise had.</p>
+                <p><strong>Attribute joins</strong> add attributes to features based on a <strong>unique identifier</strong>. Often you will have a spatial dataset (such as a shapefile) and a CSV file with extra data that you would like to map. As long as both the spatial data and the CSV have a common unique identifier (sometimes this is a name, but it could be a unique number or an address) you can join them in QGIS and add the data from the CSV to the spatial data.</p>
+                <p>Use attribute joins to help your council member with the following:</p>
+                <div style="background: #ddd; padding: 15px;">
+                    <p>Hi again map-maker,</p>
+                    <p>Now that you're getting settled in, we'd like to get a better look at our council district using census data. In particular, let's start with <strong>renter occupancy</strong> or <strong>median household income</strong> (your choice) by census tract. Make the focus our district, but please show the surrounding area, too, for context.</p>
+                    <p>Thanks as always!</p>
+                </div>
+                <p>Download census data using <a href="https://factfinder.census.gov/">American FactFinder</a>, join with the <a href="https://www.census.gov/geo/maps-data/data/cbf/cbf_tracts.html">census tracts</a>, and make a choropleth map with some of the joined data. Choose which data to get:</p>
+                <ol>
+                    <li>renter vs owner occupancy
+                        <ol>
+                            <li><a href="https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml">Guided Search</a></li>
+                            <li>"I'm looking for information about housing"</li>
+                            <li>Occupancy Characteristic &gt; Owner/Renter (Tenure in Occupied Units)</li>
+                            <li>Get <strong>census tracts</strong> for the <strong>county or counties</strong> your district is in</li>
+                            <li>At "Are you looking for data for a race or ethnic group (race, ancestry, or tribe)?" you can select <strong>Skip this Step</strong></li>
+                            <li>Select "TENURE"</li>
+                        </ol>
+                    </li>
+                    <li>household income
+                        <ol>
+                            <li><a href="https://factfinder.census.gov/faces/nav/jsf/pages/guided_search.xhtml">Guided Search</a></li>
+                            <li>"I'm looking for information about people"</li>
+                            <li>Income &amp; Earnings &gt; Income/Earnings (Households)</li>
+                            <li>Get <strong>census tracts</strong> for the <strong>county or counties</strong> your district is in</li>
+                            <li>At "Are you looking for data for a race or ethnic group (race, ancestry, or tribe)?" you can select <strong>Skip this Step</strong></li>
+                            <li>Select "MEDIAN INCOME IN THE PAST 12 MONTHS (IN 2016 INFLATION-ADJUSTED DOLLARS) "</li>
+                        </ol>
+                    </li>
+                </ol>
+                <p>For both, you'll want to:</p>
+                <ol>
+                    <li>Modify Tables &gt; Transpose Rows / Columns</li>
+                    <li>Download &gt; Use this data</li>
+                    <li>Edit the resulting CSV</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Visualizing many points</h2>
+                <div style="background: #ddd; padding: 15px;">
+                    <p>Hi again map-maker,</p>
+                    <p>There are two aspects of the district we are trying to get a grasp on, but the issues are so large that we're not even sure where to start. Can you help us understand how dense the district is with one of these and how that density varies throughout the area?</p>
+                    <ul>
+                        <li>Airbnb listings. I think you can find them at <a href="http://insideairbnb.com/get-the-data.html">Inside Airbnb</a>.</li>
+                        <li><a href="https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35#Export">Street trees</a>.</li>
+                    </ul>
+                    <p>As usual, it would help to see some streets and other landmarks for context.</p>
+                    <p>Thank you!</p>
+                </div>
+                <p>Pick the <em>one</em> of the ways we've looked at mapping many points--heat maps or hex bins--to help your council member understand the density of <em>one</em> of these point datasets:</p>
+                <ul>
+                    <li><a href="http://insideairbnb.com/get-the-data.html">Inside Airbnb</a> (scroll down to New York City and download <strong>listings.csv</strong>)</li>
+                    <li><a href="https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35#Export">NYC Street Tree Census</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Submitting Your Work</h2>
+                <p>Use a QGIS <strong>Print Layout</strong> to create <strong>two PDFs or images</strong>: one for Part 1, one for Part 2. Make sure to add map accessories such as legends, titles, and scale bars as appropriate. Refer to your sources as appropriate.</p>
+                <p>Finally, include a <strong>short summary</strong> of what you did for this assignment. Explain what you created and how you did so. What did you have problems with? What did you enjoy? What would you like to know how to do next?</p>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

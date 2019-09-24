@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 5 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 5</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide">
+            <h2>clipping?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-amy.png);">
+            <span style="background: white; float: right;">Amy</span>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-maanasa.png);">
+            <span style="background: white; float: right;">Maanasa</span>
+        </div>
+
+        <div class="slide">
+            <h2>project proposals due next week</h2>
+        </div>
+
+        <div class="slide">
+            <h2>project proposals</h2>
+            <ul style="list-style: disc;">
+                <li>more about your topic</li>
+                <li>work plan</li>
+                <li>what can you get done by the milestone (11/4)?</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>see the Final Project assignment in Canvas for links to past years' projects, expectations</h2>
+        </div>
+
+        <div class="slide">
+            <h2>managing files</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/clutter.jpg);">
+            <a class="source" href="http://nymag.com/selectall/2017/07/the-hoarders-who-never-clean-their-nightmare-desktops.html">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>make a folder for each thing you work on</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-0.png); background-size: 75%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-1.png); background-size: 75%">
+        </div>
+
+        <div class="slide">
+            <h2>come up with a per-project organization scheme</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-2.png); background-size: 75%">
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-2a.png); background-size: 75%">
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-2b.png); background-size: 75%">
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-2c.png); background-size: 75%">
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-2d.png); background-size: 75%">
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-2e.png); background-size: 75%">
+        </div>
+
+        <div class="slide">
+            <h2>keep your data together</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-3.png); background-size: 75%">
+        </div>
+
+        <div class="slide">
+            <h2>and name the files appropriately</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/file-mgmt-4.png); background-size: 50%">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>joins</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi_map.gif);">
+            <a class="source" href="http://nyctaxi.herokuapp.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxis_and_rainbows.png);">
+            <a class="source" href="https://medium.com/@vijayp/of-taxis-and-rainbows-f6bc289679a1">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxis_celebrities_medallion.png);">
+            <a class="source" href="http://gawker.com/the-public-nyc-taxicab-database-that-accidentally-track-1646724546">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/grafting.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/grafting.jpg);">
+            <h2>joins relate two datasets to each other</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/graft-potato-tomato.jpg);">
+            <a class="source" href="http://motherboard.vice.com/read/why-does-the-tomato-potato-plant-exist">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/graft-potato-tomato.jpg);">
+            <h2>joins create new hybrid datasets</h2>
+            <a class="source" href="http://motherboard.vice.com/read/why-does-the-tomato-potato-plant-exist">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ketchup-n-fries.jpg);">
+            <a class="source" href="https://diybackyardfarm.com/2015/06/03/have-you-seen-this-cool-plant/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-csv.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-csv.png);">
+            <h2>"I have this spreadsheet I want to map..."</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-shp.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-shp.png);">
+            <h2>you need a file with relatable geographies</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-fields.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-fields.png);">
+            <h2>and a column in each file that relates the two</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-layer.png);">
+            <h2>open the layer properties on the layer you want to add data to</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-layer.png);">
+            <h2>this is almost always the spatial layer (shapefile or otherwise)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-properties.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-properties.png);">
+            <h2>go to the <em>joins</em> tab and add a new one</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-dialog.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-dialog.png);">
+            <h2><em>join layer</em>: the spreadsheet you're getting data from</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-dialog.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-dialog.png);">
+            <h2><em>join field</em>: the field to join with from the spreadsheet</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-dialog.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/attribute-join-dialog.png);">
+            <h2><em>target field</em>: the field to join with from the spatial layer</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>what is the census?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_2010.jpg);">
+            <a class="source" href="http://www.census.gov/1940census/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>decennial census</h2>
+        </div>
+
+        <div class="slide">
+            <h2>American Community Survey</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/acs_computers.png);">
+            <a class="source" href="http://www.pewresearch.org/fact-tank/2014/09/19/census-computer-ownership-internet-connection-varies-widely-across-u-s/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/acs_disabilities.jpg);">
+            <a class="source" href="https://usodep.blogs.govdelivery.com/2013/11/12/american-community-survey-statistics-help-you-learn-about-people-with-disabilities-in-your-community/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/acs_commute.png);">
+            <a class="source" href="http://www.bikewalkalliance.org/blog/248-why-biking-a-walking-advocates-love-and-hate-the-census">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/acs_features.png);">
+            <a class="source" href="https://www.census.gov/programs-surveys/acs/guidance/estimates.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>margin of error: higher with 1-year estimates and smaller geometries</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census-hard-to-count.png);">
+            <a class="source" href="http://www.censushardtocountmaps2020.us/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_citizenship.png);">
+            <a class="source" href="https://fivethirtyeight.com/features/how-the-citizenship-question-could-break-the-census/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_reporter.png);">
+            <a class="source" href="http://censusreporter.org/">census reporter</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/social_explorer.png);">
+            <a class="source" href="http://www.socialexplorer.com/">social explorer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_census_factfinder.png);">
+            <a class="source" href="http://gis.nyc.gov/census/">NYC Census FactFinder</a>
+        </div>
+
+        <div class="slide">
+            <h2>no matter which data you download, you'll need appropriate geographies to go with it</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/blocks_sf_city.jpg);">
+            <a class="source" href="http://www.datapointed.net/2012/04/parts-and-parcels-us-census-block-maps/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/blocks_sf_city.jpg);">
+            <h2><em>census blocks</em> are the smallest area data is aggregated to</h2>
+            <a class="source" href="http://www.datapointed.net/2012/04/parts-and-parcels-us-census-block-maps/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/blocks_winter_haven.jpg);">
+            <a class="source" href="http://www.datapointed.net/visualizations/maps/census-blocks/winter-haven-florida/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nobody_lives_here.jpg);">
+            <a class="source" href="http://tumblr.mapsbynik.com/post/82791188950/nobody-lives-here-the-nearly-5-million-census">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_small_area_geography.jpg);">
+            <a class="source" href="http://libguides.mit.edu/c.php?g=176332&p=1158607">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/blocks.png);">
+            <h2>blocks</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/block_groups.png);">
+            <h2>block groups</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tracts.png);">
+            <h2>tracts</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tracts.png);">
+            <h2>tracts have population between 1,200 and 8,000, optimally 4,000</h2>
+            <a class="source" href="https://www.census.gov/geo/reference/gtc/gtc_ct.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_hierarchy.jpg);">
+            <a class="source" href="http://blog.datapolitan.com/2013/08/18/census-sample-survey-tract-block-zip-code/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_boundary_files.png);">
+            <a class="source" href="https://www.census.gov/geo/maps-data/data/tiger-cart-boundary.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_ntas.png);">
+            <a class="source" href="http://www.nyc.gov/html/dcp/html/bytes/dwn_nynta.shtml">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_ntas.png);">
+            <h2>NTAs are NYC-specific aggregations of census tracts</h2>
+            <a class="source" href="http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-nynta.page">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_ntas_shp.png);">
+        </div>
+
+        <div class="slide">
+            <h2>downloading census data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/factfinder_1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/factfinder_2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/factfinder_3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/factfinder_4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/factfinder_5.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/factfinder_6.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/factfinder_7.png);">
+        </div>
+
+        <div class="slide">
+            <h2>joining census data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_boundary_files.png);">
+            <h2>make sure you have the right boundary files</h2>
+            <a class="source" href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_join.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_join.png);">
+            <h2>join on the columns that line up with each other</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_join.png);">
+            <h2>in this case, either</h2>
+            <h2><code>AFFGEOID</code> and <code>GEO.id</code> or</h2>
+            <h2><code>GEOID</code> and <code>GEO.id2</code></h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>spatial joins</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/graft-potato-tomato.jpg);">
+            <a class="source" href="http://motherboard.vice.com/read/why-does-the-tomato-potato-plant-exist">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>spatial joins</h2>
+            <p>when you have layers that both have geographic features</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-join-by-location.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-join-by-location-output.png);">
+        </div>
+
+        <div class="slide">
+            <p>Works best when you have:</p>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>polygons that don't overlap (such as school districts or census tracts) and</li>
+                <li>points or smaller polygons that fall within them</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>geocoding</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding-data.png);">
+            <h2>"I have this spreadsheet I want to map..."</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding-data.png);">
+            <h2>"...it has addresses but doesn't have coordinates"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-newyork.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-unionsquare.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/pelias.gif);">
+            <a class="source" href="http://mapzen.com/pelias">pelias</a>
+        </div>
+
+        <div class="slide">
+            <h2>geocoding is a business</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Google's geocoding terms:</h2>
+            <p>up to 2,500 geocoding requests per day</p>
+        </div>
+
+        <div class="slide">
+            <h2>Google's geocoding terms:</h2>
+            <p>If you're using it online, "The Geocoding API may only be used in conjunction with a Google map..."</p>
+            <p><a class="source" href="https://developers.google.com/maps/documentation/geocoding/#Limits">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Yahoo's geocoding terms:</h2>
+            <p>up to 2000 geocoding requests per day</p>
+        </div>
+
+        <div class="slide">
+            <h2>Yahoo's geocoding terms:</h2>
+            <p>"You must not store any results"</p>
+            <p><a class="source" href="http://info.yahoo.com/legal/us/yahoo/boss/tou/?pir=ucJPcJ1ibUn.h.d.lVmlcbcEkoHjwJ_PvxG9SLK9VIbIQAw1XFrnDqY-#bossgeo">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_geocoder.png);">
+            <a class="source" href="http://geocoding.geo.census.gov/geocoder/locations/addressbatch?form">Census geocoder</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gpsvisualizer.png);">
+            <a class="source" href="http://www.gpsvisualizer.com/geocoder/">GPS visualizer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/smartystreets.png);">
+            <a class="source" href="http://smartystreets.com">smartystreets</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tam-geocoder.png);">
+            <a class="source" href="https://geoservices.tamu.edu/">Texas A&amp;M Geoservices</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mmqgis.png);">
+            <h2>mmqgis</h2>
+            <a class="source" href="http://michaelminn.com/linux/mmqgis/">mmqgis</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocod-io.png);">
+            <a class="source" href="https://www.geocod.io/">geocod.io</a>
+        </div>
+
+        <div class="slide">
+            <h2>watch out for the "null island" effect</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kidnappings.png);">
+            <a class="source" href="http://fivethirtyeight.com/datalab/mapping-kidnappings-in-nigeria/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kidnappings.png);">
+            <h2>if geocoders can't find a location, they sometimes default to the middle of the country/state</h2>
+            <a class="source" href="http://fivethirtyeight.com/datalab/mapping-kidnappings-in-nigeria/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/null-island.png);">
+            <a class="source" href="https://blogs.loc.gov/maps/2016/04/the-geographical-oddity-of-null-island/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/null-island.png);">
+            <h2>sometimes if geocoders really have no clue, they give 0,0</h2>
+            <a class="source" href="https://blogs.loc.gov/maps/2016/04/the-geographical-oddity-of-null-island/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>also, since most geocoders have limits you often need to break up your data into smaller files</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding.png);">
+            <h2>what about going from a point &rarr; name of location?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/twitter-reverse-geocoding.png);">
+            <a class="source" href="https://twitter.com/Sonali_Kohli/status/1175113614249693184">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/instagram-reverse-geocoding.jpg);">
+            <a class="source" href="https://havecamerawilltravel.com/photographer/instagram-location-search/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/flickr_reverse_geocoding.png);">
+        </div>
+
+        <div class="slide">
+            <p>"Never mind so-called disputed places (Kashmir, the West Bank, Cyprus, etc.) all neighbourhoods are 'disputed' around the edges..."</p>
+        </div>
+
+        <div class="slide">
+            <p>"... Our experience has been that there are few better ways to pick a fight than to tell someone what neighbourhood they are in (and being wrong)."</p>
+            <p>
+                <a href="http://lists.w3.org/Archives/Public/public-geolocation/2008Jun/0059.html">Aaron Straup Cope</a>
+            </p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cope-post-alpha.jpg);">
+            <a class="source" href="http://www.flickr.com/photos/straup/2884390995/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cope-texas-alpha.png);">
+            <a class="source" href="http://www.flickr.com/photos/straup/2971287541/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/alpha_neighborhoods.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-google-maps-neighborhood.png);">
+            <a class="source" href="https://www.nytimes.com/2018/08/02/technology/google-maps-neighborhood-names.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-google-maps-neighborhood-3.png);">
+            <a class="source" href="https://www.nytimes.com/2018/08/02/technology/google-maps-neighborhood-names.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-google-maps-neighborhood-2.png);">
+            <a class="source" href="https://www.nytimes.com/2018/08/02/technology/google-maps-neighborhood-names.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fruit-belt.png);">
+            <a class="source" href="https://buffalonews.com/2019/03/17/fruit-belt-fights-for-its-name-over-fears-big-tech-is-erasing-it/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/stop_frisk.png);">
+            <a class="source" href="http://freecity.commons.gc.cuny.edu/2013/12/02/maps-of-nypd-stops-2011/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tree_density.png);">
+            <a class="source" href="http://anitagraser.com/2012/03/04/mapping-density-with-hexagonal-grids/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-create-grid.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-grid.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 5</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>heatmaps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <a class="source" href="http://forecast.io/atlas/#temperature-north_america">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <h2>heatmaps attempt to show probability over an area</h2>
+            <a class="source" href="http://forecast.io/atlas/#temperature-north_america">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi_heatmap.png);">
+            <a class="source" href="https://www.mapbox.com/blog/nyc-taxi/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi_heatmap2.png);">
+            <a class="source" href="https://www.mapbox.com/blog/nyc-taxi/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/profane_mountains.png);">
+            <a class="source" href="https://cartastrophe.wordpress.com/2011/01/24/no-swearing-in-utah/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gs-0.png);"></div>
+
+        <div class="slide" style="background-image: url(img/gs-1.png);"></div>
+
+        <div class="slide" style="background-image: url(img/heatmap-grid.png);">
+            <a class="source" href="http://cartographicperspectives.org/index.php/journal/article/view/cp80-deboer/1420">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/heatmap-grid.png);">
+            <h2>heatmaps look at the covered area as a raster made of pixels</h2>
+            <a class="source" href="http://cartographicperspectives.org/index.php/journal/article/view/cp80-deboer/1420">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>there are a variety of methods for giving values to pixels</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kernels.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 6</a></h2>
+        </div>
+
+    </body>
+</html>

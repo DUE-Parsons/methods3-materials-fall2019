@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 6 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 6</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-sana.png);">
+            <span style="background: white; float: right;">Sana</span>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>updating attribute tables</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-1.png);">
+            <h2>deleting fields</h2>
+        </div>
+
+        <div class="slide">
+            <h2>sometimes you need to do something more complex</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-5.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-5.png);">
+            <h2>double-click to rename</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/refactor-6.png);">
+        </div>
+
+        <div class="slide">
+            <h2>refactoring always makes a new layer that you should save to a shapefile</h2>
+        </div>
+
+        <div class="slide">
+            <h2>the field calculator</h2>
+        </div>
+
+        <div class="slide">
+            <h2>the field calculator is a way to create new columns</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-2.png);">
+            <h2>column types</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-2.png);">
+            <ul style="list-style: disc; background-color: rgba(255, 255, 255, 0.8);">
+                <li>numbers: integer, real (decimal numbers)</li>
+                <li>text: string</li>
+                <li>dates: with and without time</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-3.png);">
+            <h2>mathematical expressions</h2>
+            <h2><code>+</code>, <code>-</code>, <code>/</code>, <code>*</code></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-3.png);">
+            <h2>mathematical expressions</h2>
+            <h2><code>+</code>, <code>-</code>, <code>/</code>, <code>*</code></h2>
+            <h2>add, subtract, divide, multiply</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-4.png);">
+            <h2>sometimes it is useful to <em>convert</em> a column type</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-5.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-6.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-7.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-8.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-9.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/field-calculator-9.png);">
+            <h2>if <code>med_income</code> is <code>-</code>, make the new column <code>NULL</code>, else convert to an integer</h2>
+        </div>
+
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>geocoding</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding-data.png);">
+            <h2>"I have this spreadsheet I want to map..."</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding-data.png);">
+            <h2>"...it has addresses but doesn't have coordinates"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-newyork.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-unionsquare.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/pelias.gif);">
+            <a class="source" href="http://mapzen.com/pelias">pelias</a>
+        </div>
+
+        <div class="slide">
+            <h2>geocoding is a business</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Google's geocoding terms:</h2>
+            <p>up to 2,500 geocoding requests per day</p>
+        </div>
+
+        <div class="slide">
+            <h2>Google's geocoding terms:</h2>
+            <p>If you're using it online, "The Geocoding API may only be used in conjunction with a Google map..."</p>
+            <p><a class="source" href="https://developers.google.com/maps/documentation/geocoding/#Limits">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Yahoo's geocoding terms:</h2>
+            <p>up to 2000 geocoding requests per day</p>
+        </div>
+
+        <div class="slide">
+            <h2>Yahoo's geocoding terms:</h2>
+            <p>"You must not store any results"</p>
+            <p><a class="source" href="http://info.yahoo.com/legal/us/yahoo/boss/tou/?pir=ucJPcJ1ibUn.h.d.lVmlcbcEkoHjwJ_PvxG9SLK9VIbIQAw1XFrnDqY-#bossgeo">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_geocoder.png);">
+            <a class="source" href="http://geocoding.geo.census.gov/geocoder/locations/addressbatch?form">Census geocoder</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gpsvisualizer.png);">
+            <a class="source" href="http://www.gpsvisualizer.com/geocoder/">GPS visualizer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/smartystreets.png);">
+            <a class="source" href="http://smartystreets.com">smartystreets</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tam-geocoder.png);">
+            <a class="source" href="https://geoservices.tamu.edu/">Texas A&amp;M Geoservices</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mmqgis.png);">
+            <h2>mmqgis</h2>
+            <a class="source" href="http://michaelminn.com/linux/mmqgis/">mmqgis</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocod-io.png);">
+            <a class="source" href="https://www.geocod.io/">geocod.io</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocod-io.png);">
+            <h2>(my current preference)</h2>
+            <a class="source" href="https://www.geocod.io/">geocod.io</a>
+        </div>
+
+        <div class="slide">
+            <h2>watch out for the "null island" effect</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kidnappings.png);">
+            <a class="source" href="http://fivethirtyeight.com/datalab/mapping-kidnappings-in-nigeria/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kidnappings.png);">
+            <h2>if geocoders can't find a location, they sometimes default to the middle of the country/state</h2>
+            <a class="source" href="http://fivethirtyeight.com/datalab/mapping-kidnappings-in-nigeria/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/null-island.png);">
+            <a class="source" href="https://blogs.loc.gov/maps/2016/04/the-geographical-oddity-of-null-island/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/null-island.png);">
+            <h2>sometimes if geocoders really have no clue, they give 0,0</h2>
+            <a class="source" href="https://blogs.loc.gov/maps/2016/04/the-geographical-oddity-of-null-island/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>also, since most geocoders have limits you often need to break up your data into smaller files</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/geocoding.png);">
+            <h2>what about going from a point &rarr; name of location?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/twitter-reverse-geocoding.png);">
+            <a class="source" href="https://twitter.com/Sonali_Kohli/status/1175113614249693184">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/instagram-reverse-geocoding.jpg);">
+            <a class="source" href="https://havecamerawilltravel.com/photographer/instagram-location-search/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/flickr_reverse_geocoding.png);">
+        </div>
+
+        <div class="slide">
+            <p>"Never mind so-called disputed places (Kashmir, the West Bank, Cyprus, etc.) all neighbourhoods are 'disputed' around the edges..."</p>
+        </div>
+
+        <div class="slide">
+            <p>"... Our experience has been that there are few better ways to pick a fight than to tell someone what neighbourhood they are in (and being wrong)."</p>
+            <p>
+                <a href="http://lists.w3.org/Archives/Public/public-geolocation/2008Jun/0059.html">Aaron Straup Cope</a>
+            </p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cope-post-alpha.jpg);">
+            <a class="source" href="http://www.flickr.com/photos/straup/2884390995/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cope-texas-alpha.png);">
+            <a class="source" href="http://www.flickr.com/photos/straup/2971287541/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/alpha_neighborhoods.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-google-maps-neighborhood.png);">
+            <a class="source" href="https://www.nytimes.com/2018/08/02/technology/google-maps-neighborhood-names.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-google-maps-neighborhood-3.png);">
+            <a class="source" href="https://www.nytimes.com/2018/08/02/technology/google-maps-neighborhood-names.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyt-google-maps-neighborhood-2.png);">
+            <a class="source" href="https://www.nytimes.com/2018/08/02/technology/google-maps-neighborhood-names.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fruit-belt.png);">
+            <a class="source" href="https://buffalonews.com/2019/03/17/fruit-belt-fights-for-its-name-over-fears-big-tech-is-erasing-it/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/stop_frisk.png);">
+            <a class="source" href="http://freecity.commons.gc.cuny.edu/2013/12/02/maps-of-nypd-stops-2011/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tree_density.png);">
+            <a class="source" href="http://anitagraser.com/2012/03/04/mapping-density-with-hexagonal-grids/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-create-grid.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-create-grid.png);">
+            <h2>first, create a grid</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-grid.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-grid.png);">
+            <h2>then, use Count Points in Polygon to find the count per hexagon</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>heatmaps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <a class="source" href="http://forecast.io/atlas/#temperature-north_america">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <h2>heatmaps attempt to show probability over an area</h2>
+            <a class="source" href="http://forecast.io/atlas/#temperature-north_america">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi_heatmap.png);">
+            <a class="source" href="https://www.mapbox.com/blog/nyc-taxi/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi_heatmap2.png);">
+            <a class="source" href="https://www.mapbox.com/blog/nyc-taxi/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/profane_mountains.png);">
+            <a class="source" href="https://cartastrophe.wordpress.com/2011/01/24/no-swearing-in-utah/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gs-0.png);"></div>
+
+        <div class="slide" style="background-image: url(img/gs-1.png);"></div>
+
+        <div class="slide" style="background-image: url(img/heatmap-grid.png);">
+            <a class="source" href="http://cartographicperspectives.org/index.php/journal/article/view/cp80-deboer/1420">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/heatmap-grid.png);">
+            <h2>heatmaps look at the covered area as a raster made of pixels</h2>
+            <a class="source" href="http://cartographicperspectives.org/index.php/journal/article/view/cp80-deboer/1420">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-1.png);">
+            <h2><em>radius</em>: the area around a point that point influences</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-1.png);">
+            <h2><em>rows</em> and <em>columns</em>: the resolution of the output raster, in pixels</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-2.png);">
+            <h2>style with <em>singleband psuedocolor</em></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-3.png);">
+            <img src="img/no.gif" style="position: absolute; top: 55%; left: 20%; width: 20%;" />
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-heatmap-4.png);">
+            <h2>consider a rectangle with a gradient fill instead</h2>
+        </div>
+
+        <div class="slide">
+            <h2>there are a variety of methods for giving values to pixels</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kernels.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>Creating data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/surveyors.png);">
+            <a class="source" href="http://www.aocweb.org/surveyors/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/trigonometry.jpg);">
+            <a class="source" href="http://www.mathamazement.com/Lessons/Pre-Calculus/04_Trigonometric-Functions/applications-of-trigonometric-functions.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/triangulation.jpg);">
+            <a class="source" href="http://www.icsm.gov.au/mapping/surveying2.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/trigonometrical_survey_of_india.jpg);">
+            <a class="source" href="https://commons.wikimedia.org/wiki/File:1922_Index_of_Great_Trigonometrical_Survey_of_India.jpg">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/trigonometrical_survey_of_india_zoom.jpg);">
+            <a class="source" href="https://commons.wikimedia.org/wiki/File:1922_Index_of_Great_Trigonometrical_Survey_of_India.jpg">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/everest.jpg);">
+            <a class="source" href="https://alpinedrome.wordpress.com/tag/himalaya/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/digitizing.jpg);">
+            <a class="source" href="http://www.geo.hunter.cuny.edu/aierulli/gis2/lectures/Lecture4/lecture4.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/digitizer.jpg);">
+            <a class="source" href="http://www.geo.hunter.cuny.edu/aierulli/gis2/lectures/Lecture4/lecture4.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps_recievers.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps_satellites_reading.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-id.gif);">
+            <a class="source" href="https://www.mapbox.com/blog/id-for-openstreetmap-reaches-beta-1/">via mapbox</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-new-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-edit-toolbar.png);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/georectified_manhattan.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectified_manhattan_transparent.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectified_manhattan_zoom.png);">
+        </div>
+
+        <div class="slide">
+            <h2>Georeferencing</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nypl_map_warper.png);">
+            <a class="source" href="http://maps.nypl.org/warper/">maps.nypl.org/warper</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nypl-building-inspector.png);">
+            <a class="source" href="http://buildinginspector.nypl.org/">NYPL Building Inspector</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nypl-building-inspector.gif);">
+            <a class="source" href="http://buildinginspector.nypl.org/">NYPL Building Inspector</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/usgs-topoview.png);">
+            <a class="source" href="https://ngmdb.usgs.gov/topoview/viewer/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public_lab_archive.png);">
+            <a class="source" href="http://publiclab.org/archive">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public-lab-kite.jpg);">
+            <a class="source" href="http://publiclab.org/wiki/gulf-coast">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public_lab_gowanus.png);">
+            <a class="source" href="http://publiclab.org/map/gowanus-canal-brooklyn-new-york/2011-01-22">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Georeferencing with QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-gcp-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-gcp-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectifiying_types.png);">
+            <a class="source" href="http://www.tankonyvtar.hu/hu/tartalom/tamop425/0032_terinformatika/ch02.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectified_boston_transit.jpg);">
+            <a class="source" href="http://benschmidt.org/dighist13/?p=283">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-georeferencing-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-georeferencing-1.png);">
+        </div>
+
+        <div class="slide">
+            <h2>find landmarks easily discerned in both your image and the reference map</h2>
+        </div>
+
+        <div class="slide">
+            <h2>try to just pin down the corners of the image onto the map&mdash;start with 4 points</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+    </body>
+</html>

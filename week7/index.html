@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 7 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 7</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-mariana.png);">
+            <span style="background: white; float: right;">Mariana</span>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-callan.png);">
+            <span style="background: white; float: right;">Callan</span>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/georectified_manhattan.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectified_manhattan_transparent.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectified_manhattan_zoom.png);">
+        </div>
+
+        <div class="slide">
+            <h2>Georeferencing</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/holc-scan.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-inequality.png);">
+            <a href="https://dsl.richmond.edu/panorama/redlining/#loc=10/41.926/-87.672&city=chicago-il" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-inequality-hover.png);">
+            <a href="https://dsl.richmond.edu/panorama/redlining/#loc=10/41.9437/-87.7045&opacity=0.8&city=chicago-il" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-inequality-download.png);">
+            <a href="https://dsl.richmond.edu/panorama/redlining/#loc=11/41.925/-87.731&city=chicago-il&text=downloads" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapping-inequality-national.png);">
+            <a href="https://dsl.richmond.edu/panorama/redlining/#loc=5/37.8/-97.9" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nypl_map_warper.png);">
+            <a class="source" href="http://maps.nypl.org/warper/">maps.nypl.org/warper</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nypl-building-inspector.png);">
+            <a class="source" href="http://buildinginspector.nypl.org/">NYPL Building Inspector</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nypl-building-inspector.gif);">
+            <a class="source" href="http://buildinginspector.nypl.org/">NYPL Building Inspector</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/usgs-topoview.png);">
+            <a class="source" href="https://ngmdb.usgs.gov/topoview/viewer/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public_lab_archive.png);">
+            <a class="source" href="http://publiclab.org/archive">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public-lab-kite.jpg);">
+            <a class="source" href="http://publiclab.org/wiki/gulf-coast">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public_lab_gowanus.png);">
+            <a class="source" href="http://publiclab.org/map/gowanus-canal-brooklyn-new-york/2011-01-22">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Georeferencing with QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-gcp-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-gcp-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectifiying_types.png);">
+            <a class="source" href="http://www.tankonyvtar.hu/hu/tartalom/tamop425/0032_terinformatika/ch02.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/georectified_boston_transit.jpg);">
+            <a class="source" href="http://benschmidt.org/dighist13/?p=283">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-georeferencing-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-georeferencing-1.png);">
+        </div>
+
+        <div class="slide">
+            <h2>find landmarks easily discerned in both your image and the reference map</h2>
+        </div>
+
+        <div class="slide">
+            <h2>try to just pin down the corners of the image onto the map&mdash;start with 4 points</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-0.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-1.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-2.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-3.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/project-manon-4.png);">
+            <a class="source" href="https://due-parsons.github.io/methods3-fall2018/projects/mapping-gentrification-risk-in-the-grand-paris/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/carto.png);">
+            <a class="source" href="https://carto.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cartodb-instagram-of-maps.png);">
+            <a class="source" href="http://talkingpointsmemo.com/idealab/cartodb-aims-to-be-the-instagram-of-maps">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-datasets.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-datasets.png);">
+            <h2>a dataset is like a file on your computer</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-new-dataset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-new-dataset.png);">
+            <h2>shp, geojson, csv, ...</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-new-dataset.png);">
+            <h2>shapefiles <em>must be</em> zipped</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-maps.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-maps.png);">
+            <h2>like projects in QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-styling.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-styles.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-categorized.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-styles-categorized.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-graduated.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-styles-graduated.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-attribute-table.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-attribute-table-button.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-attribute-table.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-filter.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-widget-price.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-widget-categorized.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-widget-average-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-widget-average-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-print-composer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-publish-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-publish-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-publish-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-publish-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-publish-4.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-publish-5.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/stabilized-map.png);">
+            <a class="source" href="https://docker4data.carto.com/viz/766a0f32-1ea1-11e5-b267-0e49835281d6/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stabilized-data-link.png);">
+            <a class="source" href="https://docker4data.carto.com/viz/766a0f32-1ea1-11e5-b267-0e49835281d6/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stabilized-data-link.png);">
+            <h2>you can make your datasets <em>public</em></h2>
+            <a class="source" href="https://docker4data.carto.com/viz/766a0f32-1ea1-11e5-b267-0e49835281d6/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stabilized-data-link.png);">
+            <h2>then others can find and use your data</h2>
+            <a class="source" href="https://docker4data.carto.com/viz/766a0f32-1ea1-11e5-b267-0e49835281d6/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stabilized-data-link.png);">
+            <h2>and looking on Carto is one way to find data</h2>
+            <a class="source" href="https://docker4data.carto.com/viz/766a0f32-1ea1-11e5-b267-0e49835281d6/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/stabilized-data-download.png);">
+            <a class="source" href="https://docker4data.carto.com/tables/changes_summary/public">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+    </body>
+</html>

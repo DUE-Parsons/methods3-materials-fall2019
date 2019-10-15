@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>In-class Exercises | Methods 3</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; Methods 3</a>
+                <h1>In-class Exercises</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Modeling</h2>
+                <p>In this part we will use the data we worked with in the previous part to make a simple model. We will attempt to make a model that can predict where there will be more pressure on renters due to Airbnb listings in their neighborhoods.</p>
+                <ol>
+                    <li>Download <a href="data/week8data.zip">today's data</a>.</li>
+                    <li>In QGIS, open the shapefile in <strong>queens_airbnb_model</strong>.</li>
+                    <li>Using the field calculator, create two new fields. The new fields should scale each field using <code>scale_linear</code>.
+                        <ol>
+                            <li>First, <strong>med_income</strong> has a minimum value of 15474, maximum value of 151964, so we use this expression in the field calculator:
+                        <pre><code>scale_linear("med_income", 
+    15474, 151964,
+    1, 0)</code></pre>
+                        Add an <strong>s_</strong> at the beginning of the new field name to indicate that it is scaled. In this case, <strong>med_income</strong> becomes <strong>s_income</strong> (since you can only use 10 characters in a name). <strong>s_income</strong> should be a decimal number field with length 10 and precision 8.
+                            </li>
+                            <li>Follow a similar process for <strong>n_airbnb</strong> (created when we calculated the Airbnb listings per tract):
+                        <pre><code>scale_linear("n_airbnb", 
+    <strong>minimum points</strong>, <strong>maximum points</strong>,
+    0, 1)</code></pre>
+                        You'll need to find the minimum and maximum values for <strong>n_airbnb</strong>. Make the resulting field <strong>s_airbnb</strong>, also a decimal number with length 10 and precision 8.
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Create a graduated style for the tracts. For the column expression, add each of the scaled fields (<strong>s_airbnb</strong>, <strong>s_renters</strong>, <strong>s_income</strong>) together.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Changing properties with CartoCSS</h2>
+                <ol>
+                    <li>Upload the <strong>VNP14IMGTDL_NRT_Global_24h</strong> shapefile from <a href="data/week8data.zip">today's data</a> to Carto. You can just use the zip file without unzipping it. These are fires detected over a 24 hour period, retrieved Oct 11, 2019 from <a href="https://firms.modaps.eosdis.nasa.gov/active_fire/#firms-shapefile">FIRMS</a>.</li>
+                    <li>Open the <a href="https://carto.com/developers/styling/cartocss/">CartoCSS documentation</a>.</li>
+                    <li>Make a map with the data and style the points.</li>
+                    <li>Using CartoCSS:
+                        <ol>
+                            <li>Make the markers 5 pixels wide.</li>
+                            <li>Give the markers an outline 2 pixels wide.</li>
+                            <li>Give the fill and stroke of the markers different colors.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: CartoCSS Zoom Conditions</h2>
+                <ol>
+                    <li>Make your markers 5 pixels wide below zoom level 8.</li>
+                    <li>Make your markers 15 pixels wide above or at zoom level 8.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: CartoCSS Attribute Conditions</h2>
+                <ol>
+                    <li>Make your markers a different color when the <strong>daynight</strong> is <strong>D</strong>.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

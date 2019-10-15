@@ -185,6 +185,10 @@ pre {
     line-height: 60px;
 }
 
+pre.prettyprint {
+    border: none;
+}
+
 code {
     font-family: Courier, mono;
 }

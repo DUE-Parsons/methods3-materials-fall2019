@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 10 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 10</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-daniel.png);">
+            <span style="background: white; float: right;">Daniel</span>
+            <a href="https://thenewschool.carto.com/u/danielbieckmann/builder/f877d554-78ac-4563-996e-b129e72dc278/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B52.35922172357614%2C4.879560470581056%5D%2C%22sw%22%3A%5B52.383746335095154%2C4.958868026733399%5D%2C%22center%22%3A%5B52.37148573147612%2C4.9192142486572275%5D%2C%22zoom%22%3A15%7D%7D" class="source">Carto map</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-julianna.png);">
+            <span style="background: white; float: right;">Julianna</span>
+            <a href="https://thenewschool.carto.com/u/galvj282/builder/e7452db5-7a0c-46ea-8aa7-9be50f9851de/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B-25.50634801103172%2C-49.41152572631836%5D%2C%22sw%22%3A%5B-25.361245303173092%2C-49.094295501708984%5D%2C%22center%22%3A%5B-25.433818501607533%2C-49.25291061401367%5D%2C%22zoom%22%3A13%7D%7D" class="source">Carto map</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-julianna-code.png);">
+            <span style="background: white; float: right;">Julianna</span>
+            <a href="https://thenewschool.carto.com/u/galvj282/builder/e7452db5-7a0c-46ea-8aa7-9be50f9851de/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B-25.50634801103172%2C-49.41152572631836%5D%2C%22sw%22%3A%5B-25.361245303173092%2C-49.094295501708984%5D%2C%22center%22%3A%5B-25.433818501607533%2C-49.25291061401367%5D%2C%22zoom%22%3A13%7D%7D" class="source">Carto map</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>TODO maybe also free little libraries?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>so how does a web map work?</h2>
+        </div>
+
+        <div class="slide">
+            <p>(a few of these slides are adapted from these excellent <a href="http://maptime.github.io/anatomy-of-a-web-map/#45">Maptime slides</a>)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>most webmaps start with a basemap</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>basemaps are tiled</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>tiles are 256 x 256 pixel images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>they use the same <em>zoom</em>, <em>x</em>, and <em>y</em> values, so they're interchangeable</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openwhatevermap.png);">
+            <a href="http://www.openwhatevermap.xyz/" class="source">openwhatevermap.xyz</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-2.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>as you zoom in, the number of tiles quadruples</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>if you made tiles for all of zoom 18 you'd have nearly 69 <em>billion</em> images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+            <h2>that's why browsers only load what you need to see</h2>
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+        </div>
+
+        <div class="slide">
+            <h2>each tile is just an image on the internet</h2>
+            <p>http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+            <p style="background: white;">http://a.tile.stamen.com/toner/0/0/0.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom1.png);">
+            <h2>these tiles use OpenStreetMap data</h2>
+            <h2>+ CartoCSS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>so how do you <em>make</em> base maps?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>it depends!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>in theory you can make tiles on your own</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openstreetmap.png);">
+            <h2>there is a free global data source</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapnik.png);">
+            <h2>and the software for making tiles is open source</h2>
+        </div>
+
+        <div class="slide">
+            <h2>but running this software is pretty difficult</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+            <h2>so, many mapmakers turn to Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <a href="https://www.mapbox.com/mapbox-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h2>Mapbox provides modified OpenStreetMap data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <a href="https://www.mapbox.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <h2>not free, but free up to a point</h2>
+            <a href="https://www.mapbox.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/anatomy-of-a-web-map.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/anatomy-of-a-web-map.png);">
+            <h2>luckily Mapbox and Carto do most of this for us</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/anatomy-of-a-web-map-carto.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/anatomy-of-a-web-map-mapbox.png);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>creating styles in Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-go-to-studio.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-landing.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-select-base-style.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-home.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-color.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-color-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-field.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-filter-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-publish.png);">
+        </div>
+
+        <div class="slide">
+            <h2>for the most part, cartographic conventions hold with basemaps</h2>
+        </div>
+
+        <div class="slide">
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>scale</li>
+                <li>hierarchy</li>
+                <li>color</li>
+                <li>symbology</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>but with basemaps, be aware that <em>zooming</em> and <em>panning</em> change how it will be viewed</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-light.gif);">
+            <a href="https://blog.mapbox.com/light-and-dark-maps-for-data-visualization-3c4aed88b2e8" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/curbyourlitter.png);">
+            <a href="http://map.curbyourlitter.org/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carfreekeywest.png);">
+            <a href="https://map.carfreekeywest.com/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>using Mapbox tiles in Carto</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-basemap.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-basemap-mapbox.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>sometimes you need to add more data to your style</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Mapbox includes many datasets that are not included by default</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-new-layer-button.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-new-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-new-layer.png);">
+            <h2>look around under Mapbox Streets V7 and the unused sources</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-new-layer-filter.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-new-layer-filter.png);">
+            <h2>you may need to filter the data once you load it</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can add your own data to Mapbox basemaps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>for example, when you have too much data to put in Carto, and you don't want popups on the data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing-tilesets.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing-tilesets.png);">
+            <h2>not bad!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>I recommend adding data as a <em>tileset</em></h2>
+        </div>
+
+        <div class="slide">
+            <p>1. Upload data (such as a zipped shapefile)</p>
+            <p>2. Add the tileset to your style</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-tileset-link.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-upload-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-data-add.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>much of the data used by Mapbox comes from OpenStreetMap</h2>
+        </div>
+
+        <div class="slide">
+            <h2>OpenStreetMap</h2>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                    <li>licensed freely</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                    <li>licensed freely</li>
+                    <li>usually created by a large entity</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-opendata-filming-locations.png);">
+            <a class="source" href="https://data.cityofnewyork.us/Business/Filming-Locations-Scenes-from-the-City-/qb3k-n8mm">data.cityofnewyork.us/Business/Filming-Locations-Scenes-from-the-City-/qb3k-n8mm</a>
+        </div>
+
+        <div class="slide">
+            <h2>collaborative data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/public_lab_archive.png);">
+            <a class="source" href="http://publiclab.org/archive">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>what is OpenStreetMap (OSM)?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-website.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/treasure_map.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm_cake_globe.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/equinix-datacenter.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/sotmus2014.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-show-me-the-way.gif);">
+            <a class="source" href="http://osmlab.github.io/show-me-the-way/">show me the way</a>
+        </div>
+
+        <div class="slide">
+            <iframe width="640" height="360" src="http://www.youtube.com/embed/7sC83j6vzjo?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-draw.png);">
+        </div>
+
+        <div class="slide">
+            <h2>"the free wiki map of the world"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_grids.png);">
+            <a class="source" href="http://www.datapointed.net/visualizations/maps/enhanced-street-grids/?lat=40.791849&lon=-74.072056&z=12">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <p>started in 2004 in the UK</p>
+        </div>
+
+        <div class="slide">
+            <p>started in 2004 in the UK</p>
+            <p>first State of the Map conference in 2007</p>
+        </div>
+
+        <div class="slide">
+            <p>started in 2004 in the UK</p>
+            <p>first State of the Map conference in 2007</p>
+            <p>over 1 million registered users in 2013</p>
+        </div>
+
+        <div class="slide">
+            <p>started in 2004 in the UK</p>
+            <p>first State of the Map conference in 2007</p>
+            <p>over 1 million registered users in 2013</p>
+            <p>over 4 million registered users in 2017</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-registered-users.png);">
+            <a class="source" href="http://wiki.openstreetmap.org/wiki/Stats">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-db-stats.png);">
+            <a class="source" href="http://wiki.openstreetmap.org/wiki/Stats">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>license</h2>
+        </div>
+
+        <div class="slide">
+            <h2>license</h2>
+            <p>Open Database License (ODbL)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/odbl.png);">
+            <a class="source" href="http://opendatacommons.org/licenses/odbl/summary/">
+                source
+            </a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>what does the data look like?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-shapes.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-shapes-nodes.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-shapes-ways.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-shapes-closed-ways.png);">
+        </div>
+
+        <div class="slide">
+            <h2>shapes</h2>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>nodes (points)</li>
+                <li>ways (lines)</li>
+                <li>closed ways (polygons)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>nodes, ways, closed ways</h2>
+            <p>are just shapes with <strong>no meaning</strong> until you give them attributes, as in any GIS</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-shapes.png);">
+        </div>
+
+        <div class="slide">
+            <h2>so you have to add attributes</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-attribute-table.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-table.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-tags-union-square.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-tags-bmt-broadway.png);">
+        </div>
+
+        <div class="slide">
+            <p>an attribute table wouldn't work because:</p>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>there would be thousands of columns</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <p>an attribute table wouldn't work because:</p>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>there would be thousands of columns</li>
+                <li>and most of those columns would be empty (eg 'electrified')</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <p>an attribute table wouldn't work because:</p>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>there would be thousands of columns</li>
+                <li>and most of those columns would be empty (eg 'electrified')</li>
+                <li>what you could map would be predetermined</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>key-value pairs</p>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>leisure=park</p>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>name=Union Square West</p>
+        </div>
+
+        <div class="slide">
+            <h2>tags</h2>
+            <p>we make them up as we go!</p>
+        </div>
+
+        <div class="slide">
+            <h2>folksonomy</h2>
+        </div>
+
+        <div class="slide">
+            <h2>folksonomy</h2>
+            <p>a collaborative system of categorization</p>
+        </div>
+
+        <div class="slide">
+            <h2>you can tag things any way you want</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/spinny-equals-no.jpg);">
+            <a class="source" href="http://www.aaronland.info/weblog/2011/09/13/inodes/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm_weird_tags.png);">
+            <a class="source" href="https://twitter.com/professorlemeza/status/523229634755047424">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taginfo_unicycle_barely.png);">
+            <a class="source" href="http://taginfo.openstreetmap.org/keys/unicycle#values">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/overpass_unicycle_barely.png);">
+            <a class="source" href="http://overpass-turbo.eu/?w=%22unicycle%22%3D%22barely%22+global&R">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wiki_barrier_kissinggate.png);">
+            <a class="source" href="http://wiki.openstreetmap.org/wiki/Tag:barrier%3Dkissing_gate">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>how do you use the data?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>there are many ways, but I recommend starting with:</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/metro-extracts.png);">
+            <h2>metro extracts</h2>
+            <a class="source" href="https://www.nextzen.org/metro-extracts/index.html">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/overpass.png);">
+            <h2>overpass</h2>
+            <a class="source" href="https://overpass-turbo.eu/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/quickosm.png);">
+            <h2>QuickOSM plugin</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/quickosm-results.png);">
+            <h2>QuickOSM plugin</h2>
+        </div>
+
+    </body>
+</html>

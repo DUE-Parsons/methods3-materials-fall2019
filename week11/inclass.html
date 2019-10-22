@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>In-class Exercises | Methods 3</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; Methods 3</a>
+                <h1>In-class Exercises</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Time Manager</h2>
+                <ol>
+                    <li>Download <a href="data/week11data.zip">this data</a>.</li>
+                    <li>Open the <strong>earthquakes</strong> shapefile in QGIS.</li>
+                    <li>Install the TimeManager QGIS plugin.</li>
+                    <li>Use TimeManager to animate the earthquakes using the <strong>time</strong> column with a time frame of one day.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: 3D maps</h2>
+                <ol>
+                    <li>Open the <strong>buildings-lower-manhattan</strong> shapefile in QGIS.</li>
+                    <li>Add a 3d view: <strong>View &gt; New 3D Map View</strong>.</li>
+                    <li>Enable 3D rendering on the buildings layer and set the extrusion. Hold <strong>shift</strong> and drag the mouse cursor to change the perspective on the 3d view.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Data Plotly</h2>
+                <ol>
+                    <li>Open the <strong>queens-tenancy-income</strong> shapefile in QGIS.</li>
+                    <li>Install the <strong>Data Plotly</strong> plugin.</li>
+                    <li>Open Data Plotly: <strong>Plugins &gt; Data Plotly &gt; Data Plotly</strong> plugin.</li>
+                    <li>Make a scatterplot of income versus owners.</li>
+                    <li>Try the <strong>box select</strong> tool on the plot.</li>
+                    <li>Experiment with some other plots, such as histograms.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: LiDAR imagery</h2>
+                <ol>
+                    <li>Open <strong>landcover.tif</strong> in QGIS. This is an extract of the city-wide landcover data available on the <a href="https://data.cityofnewyork.us/Environment/Landcover-Raster-Data-2010-/9auy-76zt">open data portal</a>.</li>
+                    <li>Experiment with using the <strong>Sieve</strong> function: <strong>Raster &gt; Analysis &gt; Sieve</strong>, select a place to save and a threshold (say 100). This will make smaller clumps of pixels become part of their neighboring clumps of pixels.</li>
+                    <li>Right click on the original image, select <strong>Styles &gt; Copy Styles</strong>, then paste them into the sieved layer (right click, <strong>Styles &gt; Paste Styles</strong>).</li>
+                    <li>Build vectors out of the resulting raster. Go to <strong>Raster &gt; Conversion &gt; Polygonize</strong> and select a location to save to.</li>
+                    <li>In the vector layer use an expression to select only the paved areas (gray in the raster).</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

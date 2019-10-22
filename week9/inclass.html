@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>In-class Exercises | Methods 3</title>
+        <link href='http://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; Methods 3</a>
+                <h1>In-class Exercises</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: HTML</h2>
+                <ol>
+                    <li>Download <a href="data/week9data.zip">today's data</a>.</li>
+                    <li>Upload the CSV to your Carto account (<strong>NYC_Women_s_Resource_Network_Database.csv</strong>). This is from the <a href="https://data.cityofnewyork.us/Social-Services/NYC-Women-s-Resource-Network-Database/pqg4-dm6b/data">NYC Open Data portal</a>.</li>
+                    <li>Make a map using the data.</li>
+                    <li>Let's add a link back to the source (<a href="https://data.cityofnewyork.us/Social-Services/NYC-Women-s-Resource-Network-Database/pqg4-dm6b/data">NYC Open Data portal</a>). Add a legend, edit the HTML for it, and add this at the bottom of the legend (you can copy and paste it):
+                        <pre><code>&lt;p&gt;
+    Data from &lt;a href="https://data.cityofnewyork.us/Social-Services/NYC-Women-s-Resource-Network-Database/pqg4-dm6b/data"&gt;NYC Open Data portal&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+                    </li>
+                    <li>Let's link to each resource's website. Add a popup for the layer and add the <strong>url</strong> field to it. Then edit the HTML and find <strong>{{url}}</strong> in it. Replace <strong>{{url}}</strong> with this:
+                        <pre><code>&lt;a href="{{url}}"&gt;Learn more&lt;/a&gt;</code></pre>
+                    </li>
+                    <li>If you want the links to open in their own tab, use this instead:
+                        <pre><code>&lt;a href="{{url}}" target="_blank"&gt;Learn more&lt;/a&gt;</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: CSS</h2>
+                <ol>
+                    <li>Let's make the link in the legend blend in better with the rest of it. We'll add top margin to the link to make space between it and the legend, then make the font a bit smaller. In the legend, update our current link:
+                        <pre><code>&lt;p&gt;
+    Data from &lt;a href="https://data.cityofnewyork.us/Social-Services/NYC-Women-s-Resource-Network-Database/pqg4-dm6b/data"&gt;NYC Open Data portal&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+                        with this:
+                        <pre><code>&lt;p <strong>style="margin-top: 20px; font-size: 10px;"</strong>&gt;
+    Data from &lt;a href="https://data.cityofnewyork.us/Social-Services/NYC-Women-s-Resource-Network-Database/pqg4-dm6b/data"&gt;NYC Open Data portal&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+                    </li>
+                    <li>You may want to change more font styles, too. Try adding a <strong>style</strong> to the link, ending up with this:
+                        <pre><code>&lt;p style="margin-top: 20px; font-size: 10px;"&gt;
+    Data from &lt;a href="https://data.cityofnewyork.us/Social-Services/NYC-Women-s-Resource-Network-Database/pqg4-dm6b/data" <strong>style="color: #820575; font-weight: bold;"</strong>&gt;NYC Open Data portal&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+                        Feel free to try a different color.
+                    </li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

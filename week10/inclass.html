@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>In-class Exercises | Methods 3</title>
+        <link href='http://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; Methods 3</a>
+                <h1>In-class Exercises</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Mapbox</h2>
+                <ol>
+                    <li>Log in to your <a href="https://www.mapbox.com/">Mapbox account</a> and go to Studio.</li>
+                    <li>Create a new style based on <strong>Basic</strong>.</li>
+                    <li>Change the <strong>color</strong> of some polygons and lines.</li>
+                    <li>Change the <strong>font</strong> of some labels.</li>
+                    <li>Make buildings more transparent when zoomed out and less transparent when zoomed in.</li>
+                    <li>Experiment!</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Add a Mapbox style to Carto</h2>
+                <ol>
+                    <li>Publish your style from the previous part.</li>
+                    <li>Find the Carto URL as detailed in the slides, and copy it.</li>
+                    <li>Open a Carto map.</li>
+                    <li>Click on the basemap to change it, select <strong>Mapbox</strong> for the source, and enter the URL from Mapbox.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Add a Mapbox layer</h2>
+                <ol>
+                    <li>Mapbox Basic doesn't contain contour lines. Let's fix this.</li>
+                    <li>Add a new layer by clicking <strong>+ Add Layer</strong> in the top left.</li>
+                    <li>Under <strong>Unused sources</strong> find and expand <strong>Mapbox Terrain V2</strong>.</li>
+                    <li>Select <strong>contour</strong>, change its type from <strong>Fill</strong> to <strong>Line</strong> and style it.</li>
+                    <li>You may need to zoom in (at least zoom level 9) in a not-too-flat area to see the contour lines.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Add your own layer</h2>
+                <ol>
+                    <li>Mapbox Basic also doesn't contain the borough boundaries. Let's add those now.</li>
+                    <li>Download <a href="data/week10data.zip">today's data</a> and unzip it. The zip file <strong>nybb.zip</strong> contains the borough boundaries shapefile.</li>
+                    <li>Add a new layer to your style. Instead of using an available layer, click <strong>New tileset</strong> and upload <strong>nybb.zip</strong>.</li>
+                    <li>Once the upload is complete, select it and style the layer.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
